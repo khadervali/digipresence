@@ -1,0 +1,52 @@
+/* ============================================================
+   DigiPresence · TYPOGRAPHY — refined / Apple-grade
+   System SF Pro stack (Inter as the cross-platform fallback).
+   ============================================================ */
+:root {
+  /* ---- Families ----
+     -apple-system / BlinkMacSystemFont resolve to San Francisco (SF Pro Display/Text,
+     with Apple's optical sizing) on Apple platforms — no download needed. Inter is the
+     named cross-platform fallback (loaded in fonts/fonts.css). */
+  --font-display: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans:    -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Monaco, monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-display:  600;
+
+  /* ---- Type scale (px) ---- */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 17px;   /* Apple base */
+  --text-md:   19px;
+  --text-lg:   21px;
+  --text-xl:   24px;
+  --text-2xl:  28px;
+  --text-3xl:  36px;
+  --text-4xl:  48px;
+  --text-5xl:  64px;
+  --text-6xl:  80px;
+  --text-7xl:  96px;
+
+  /* ---- Line heights ---- */
+  --leading-none:    1;
+  --leading-tight:   1.07;   /* big display */
+  --leading-snug:    1.18;
+  --leading-normal:  1.47;   /* body */
+  --leading-relaxed: 1.6;
+
+  /* ---- Letter spacing ---- */
+  --tracking-tighter: -0.025em;  /* hero display */
+  --tracking-tight:   -0.015em;  /* headings */
+  --tracking-normal:  0em;
+  --tracking-wide:    0.01em;
+
+  /* ---- Semantic roles ---- */
+  --font-heading: var(--font-display);
+  --font-body:    var(--font-sans);
+  --font-eyebrow: var(--font-sans);
+}

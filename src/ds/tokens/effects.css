@@ -1,0 +1,41 @@
+/* ============================================================
+   DigiPresence · EFFECTS — refined / Apple-grade
+   No hard borders or offset shadows. Hairlines, soft depth,
+   smooth motion. Restraint over decoration.
+   ============================================================ */
+:root {
+  /* ---- Radii ---- */
+  --radius-none: 0px;
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
+  --radius-2xl:  30px;
+  --radius-pill: 980px;   /* Apple pill buttons */
+
+  /* ---- Borders ---- */
+  --border-hairline: 1px;
+  --border:          1px;
+  --border-bold:     1.5px;
+
+  /* ---- Shadows — soft, low-contrast, diffuse ---- */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 6px 22px rgba(0,0,0,0.07);
+  --shadow-lg: 0 14px 44px rgba(0,0,0,0.10);
+  --shadow-nav: 0 2px 20px rgba(0,0,0,0.06);   /* floating header */
+  --shadow-focus: 0 0 0 4px rgba(0,113,227,0.28);
+
+  /* ---- Motion (Apple easing) ---- */
+  --dur-fast:  180ms;  /* @kind other */
+  --dur:       320ms;  /* @kind other */
+  --dur-slow:  560ms;  /* @kind other */
+  --ease-out:    cubic-bezier(0.28, 0.11, 0.32, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);      /* @kind other */
+  --ease-emph:   cubic-bezier(0.16, 1, 0.3, 1);     /* @kind other */
+
+  /* ---- Focus ---- */
+  --focus-width: 4px;
+  --focus-offset: 2px;
+}

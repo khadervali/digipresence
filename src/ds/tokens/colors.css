@@ -1,0 +1,68 @@
+/* ============================================================
+   DigiPresence · COLORS  — refined / Apple-grade
+   Near-monochrome neutrals + a single confident blue accent.
+   Restraint is the brand: color is rare and intentional.
+   ============================================================ */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ---- Ink / neutral scale ---- */
+  --ink-900: #1d1d1f;   /* primary text — Apple near-black */
+  --ink-800: #2d2d2f;
+  --ink-700: #424245;
+  --ink-600: #6e6e73;   /* secondary text */
+  --ink-500: #86868b;   /* tertiary text */
+  --ink-400: #a1a1a6;
+  --ink-300: #c7c7cc;
+  --ink-200: #d2d2d7;   /* hairline borders */
+  --ink-100: #e8e8ed;
+  --ink-50:  #f5f5f7;   /* section panels */
+
+  /* ---- Surfaces ---- */
+  --paper:        #fbfbfd;  /* page background */
+  --paper-bright: #ffffff;  /* cards */
+  --paper-sunk:   #f5f5f7;  /* alternating panels */
+
+  /* ---- Accent — DigiPresence blue ---- */
+  --accent-700: #0058b0;
+  --accent-600: #0066cc;   /* text links */
+  --accent-500: #0071e3;   /* primary buttons */
+  --accent-450: #0077ed;   /* button hover */
+  --accent-400: #2997ff;   /* accents on dark surfaces */
+  --accent-100: #e8f1fd;   /* soft tint */
+
+  /* ---- Status ---- */
+  --success: #00a85a;  --success-bg: #e7f7ee;
+  --warning: #f08c00;  --warning-bg: #fdf0dd;
+  --danger:  #d70015;  --danger-bg:  #fde8e8;
+  --info:    #0071e3;  --info-bg:    #e8f1fd;
+  --toggle-on: #34c759; /* iOS-style switch */
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these
+     ============================================================ */
+  --bg:            var(--paper);
+  --bg-alt:        var(--ink-50);
+  --bg-inverse:    var(--black);
+  --surface-card:  var(--paper-bright);
+  --surface-raised: var(--paper-bright);
+  --surface-inverse: var(--black);
+
+  --text-primary:   var(--ink-900);
+  --text-secondary: var(--ink-600);
+  --text-muted:     var(--ink-500);
+  --text-inverse:   #f5f5f7;
+  --text-on-accent: var(--white);
+  --text-link:      var(--accent-600);
+
+  --border-color:   var(--ink-200);
+  --border-subtle:  var(--ink-100);
+  --border-strong:  var(--ink-900);
+
+  --action-primary:       var(--accent-500);
+  --action-primary-hover: var(--accent-450);
+  --action-primary-text:  var(--white);
+
+  --focus-ring: var(--accent-500);
+}
