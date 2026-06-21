@@ -11,6 +11,12 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
 # Build output (index.html is built from src/)
 # Uncomment if you want to track only source files:
 # index.html
