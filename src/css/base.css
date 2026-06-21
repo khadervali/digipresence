@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════════════
+   DigiPresence Website — Base & Reset
+   Built on the DigiPresence Design System tokens
+   ═══════════════════════════════════════════════ */
+
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ── Section layout ── */
+.section {
+  padding: var(--section-y-lg) 0;
+}
+.section-label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--accent-600);
+  margin-bottom: var(--space-3);
+}
+.section-heading {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-display);
+  font-size: var(--text-5xl);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  margin: 0;
+}
+.section-subhead {
+  font-size: var(--text-md);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: var(--container-text);
+  margin: var(--space-5) auto 0;
+}
+
+@media (max-width: 768px) {
+  .section { padding: var(--section-y) 0; }
+  .section-heading { font-size: var(--text-3xl); }
+}
