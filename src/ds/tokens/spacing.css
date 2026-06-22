@@ -19,12 +19,9 @@
   --space-40: 160px;
 
   /* ---- Layout ---- */
-  --container-max: 1100px;
+  --container-max: 1200px;
   --container-wide: 1320px;
-  --container-text: 680px;
-  --gutter:        22px;
-  --section-y:     112px;
-  --section-y-sm:  80px;
-  --section-y-lg:  144px;
-  --header-h:      56px;
+  --gutter:        24px;
+  --section-y:     112px;   /* vertical rhythm between marketing sections */
+  --header-h:      72px;
 }

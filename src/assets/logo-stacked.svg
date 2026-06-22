@@ -1,0 +1,6 @@
+<svg width="200" height="118" viewBox="0 0 200 118" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DigiPrezence">
+  <circle cx="78" cy="32" r="6" fill="#1d1d1f"></circle>
+  <path d="M87 21.3 A14 14 0 0 1 87 42.7" fill="none" stroke="#1d1d1f" stroke-width="5" stroke-linecap="round"></path>
+  <path d="M92.8 14.4 A23 23 0 0 1 92.8 49.6" fill="none" stroke="#1d1d1f" stroke-width="5" stroke-linecap="round"></path>
+  <text x="100" y="98" text-anchor="middle" font-family="-apple-system, &#39;SF Pro Display&#39;, &#39;Inter&#39;, sans-serif" font-size="27" font-weight="600" letter-spacing="-0.5" fill="#1d1d1f">DigiPrezence</text>
+</svg>

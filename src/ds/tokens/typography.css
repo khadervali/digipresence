@@ -1,17 +1,16 @@
 /* ============================================================
-   DigiPresence · TYPOGRAPHY — refined / Apple-grade
-   System SF Pro stack (Inter as the cross-platform fallback).
+   DigiPresence · TYPOGRAPHY — v2
+   Outfit for display & headings (matches logo wordmark geometry).
+   Inter / system-ui for body text — maximum legibility.
    ============================================================ */
 :root {
-  /* ---- Families ----
-     -apple-system / BlinkMacSystemFont resolve to San Francisco (SF Pro Display/Text,
-     with Apple's optical sizing) on Apple platforms — no download needed. Inter is the
-     named cross-platform fallback (loaded in fonts/fonts.css). */
-  --font-display: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-sans:    -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* ---- Families ---- */
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
+  --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   --font-mono:    ui-monospace, "SF Mono", Menlo, Monaco, monospace;
 
   /* ---- Weights ---- */
+  --weight-light:    300;
   --weight-regular:  400;
   --weight-medium:   500;
   --weight-semibold: 600;
@@ -21,9 +20,9 @@
   /* ---- Type scale (px) ---- */
   --text-xs:   12px;
   --text-sm:   14px;
-  --text-base: 17px;   /* Apple base */
-  --text-md:   19px;
-  --text-lg:   21px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
   --text-xl:   24px;
   --text-2xl:  28px;
   --text-3xl:  36px;
@@ -34,16 +33,17 @@
 
   /* ---- Line heights ---- */
   --leading-none:    1;
-  --leading-tight:   1.07;   /* big display */
-  --leading-snug:    1.18;
-  --leading-normal:  1.47;   /* body */
-  --leading-relaxed: 1.6;
+  --leading-tight:   1.08;
+  --leading-snug:    1.20;
+  --leading-normal:  1.50;
+  --leading-relaxed: 1.65;
 
   /* ---- Letter spacing ---- */
-  --tracking-tighter: -0.025em;  /* hero display */
-  --tracking-tight:   -0.015em;  /* headings */
+  --tracking-tighter: -0.03em;
+  --tracking-tight:   -0.015em;
   --tracking-normal:  0em;
-  --tracking-wide:    0.01em;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.08em;
 
   /* ---- Semantic roles ---- */
   --font-heading: var(--font-display);

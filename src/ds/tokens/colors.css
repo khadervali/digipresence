@@ -1,68 +1,182 @@
 /* ============================================================
-   DigiPresence · COLORS  — refined / Apple-grade
-   Near-monochrome neutrals + a single confident blue accent.
-   Restraint is the brand: color is rare and intentional.
+   DigiPresence · COLORS — v3
+   Dark theme is default (:root). Light theme via [data-theme="light"].
+   --ink-* scale is INTENTIONALLY INVERTED in dark mode so legacy
+   website components (ink-900 for headings, ink-100 for borders)
+   work correctly in both themes without changes.
    ============================================================ */
 :root {
+
+  /* ---- Canvas / surface scale ---- */
+  --canvas:    #07080e;
+  --surface-0: #0c0e1c;
+  --surface-1: #111426;
+  --surface-2: #181b34;
+  --surface-3: #1f2440;
+
+  /* ---- Ink scale — DARK: inverted (900 = light/text, 50 = dark/bg) ---- */
+  --ink-50:  #0c0e1c;                 /* section bg (dark) */
+  --ink-100: rgba(255,255,255,0.09);  /* hairline borders */
+  --ink-200: #3a4175;
+  --ink-300: #616baa;
+  --ink-400: #8892cc;
+  --ink-500: #8892cc;                 /* muted text */
+  --ink-600: #b0b8e8;                 /* secondary text */
+  --ink-700: #b0b8e8;                 /* secondary text */
+  --ink-800: #d4d8f5;
+  --ink-900: #eef0ff;                 /* primary text */
+
+  /* ---- Brand blue ---- */
+  --blue-200: #b3d9ff;
+  --blue-300: #7ec2fe;
+  --blue-400: #4facfe;
+  --blue-500: #2b8fe8;
+  --blue-600: #1a6dc8;
+  --blue-700: #104fa0;
+
+  /* ---- Brand violet ---- */
+  --violet-200: #e4c4ff;
+  --violet-300: #cc96ff;
+  --violet-400: #b06cf4;
+  --violet-500: #9333ea;
+  --violet-600: #7920cc;
+  --violet-700: #5b18a8;
+
+  /* ---- Gradients ---- */
+  --gradient-brand:   linear-gradient(135deg, #4facfe 0%, #a855f7 100%); /* @kind color */
+  --gradient-brand-h: linear-gradient(90deg,  #4facfe 0%, #a855f7 100%); /* @kind color */
+  --gradient-brand-r: linear-gradient(135deg, #a855f7 0%, #4facfe 100%); /* @kind color */
+  --gradient-surface: linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%);
+
+  /* ---- Status ---- */
+  --success: #22c55e;  --success-bg: rgba(34,197,94,0.12);
+  --warning: #f59e0b;  --warning-bg: rgba(245,158,11,0.12);
+  --danger:  #f43f5e;  --danger-bg:  rgba(244,63,94,0.12);
+  --info:    #4facfe;  --info-bg:    rgba(79,172,254,0.12);
+  --toggle-on: #22c55e;
+
+  /* ---- Semantic aliases ---- */
+  --bg:              var(--canvas);
+  --bg-alt:          var(--surface-0);
+  --bg-inverse:      #f0f2ff;
+  --surface-card:    var(--surface-1);
+  --surface-raised:  var(--surface-2);
+  --surface-inverse: #f0f2ff;
+
+  --text-primary:   #eef0ff;
+  --text-secondary: #b0b8e8;
+  --text-muted:     #8892cc;
+  --text-inverse:   #0b0e25;
+  --text-on-accent: #ffffff;
+  --text-link:      var(--blue-400);
+
+  --border-color:  rgba(255,255,255,0.09);
+  --border-subtle: rgba(255,255,255,0.05);
+  --border-strong: rgba(255,255,255,0.22);
+
+  --action-primary:       var(--blue-400);
+  --action-primary-hover: var(--blue-300);
+  --action-primary-text:  #ffffff;
+  --focus-ring:           var(--blue-400);
+
+  /* ---- Back-compat surface aliases ---- */
+  --paper:        #07080e;
+  --paper-bright: #111426;
+  --paper-sunk:   #0c0e1c;
   --white: #ffffff;
   --black: #000000;
 
-  /* ---- Ink / neutral scale ---- */
-  --ink-900: #1d1d1f;   /* primary text — Apple near-black */
-  --ink-800: #2d2d2f;
-  --ink-700: #424245;
-  --ink-600: #6e6e73;   /* secondary text */
-  --ink-500: #86868b;   /* tertiary text */
-  --ink-400: #a1a1a6;
-  --ink-300: #c7c7cc;
-  --ink-200: #d2d2d7;   /* hairline borders */
+  /* ---- Accent aliases (old website uses these) ---- */
+  --accent-700: var(--blue-700);
+  --accent-600: var(--blue-500);
+  --accent-500: var(--blue-400);
+  --accent-450: var(--blue-300);
+  --accent-400: var(--blue-300);
+  --accent-100: rgba(79,172,254,0.10);
+
+  /* ---- Header theming ---- */
+  --header-bg:              rgba(7,8,14,0.75);
+  --header-bg-scrolled:     rgba(12,14,28,0.92);
+  --header-border:          transparent;
+  --header-border-scrolled: rgba(255,255,255,0.08);
+}
+
+
+/* ============================================================
+   LIGHT THEME
+   ============================================================ */
+[data-theme="light"] {
+
+  --canvas:    #fbfbfd;
+  --surface-0: #f5f5f7;
+  --surface-1: #ffffff;
+  --surface-2: #f0f0f5;
+  --surface-3: #e8e8ed;
+
+  /* ---- Ink scale — LIGHT: standard (900 = dark/text, 50 = light/bg) ---- */
+  --ink-50:  #f5f5f7;
   --ink-100: #e8e8ed;
-  --ink-50:  #f5f5f7;   /* section panels */
+  --ink-200: #c7c7cc;
+  --ink-300: #aeaeb2;
+  --ink-400: #8e8e93;
+  --ink-500: #636366;
+  --ink-600: #48484a;
+  --ink-700: #3a3a3c;
+  --ink-800: #2c2c2e;
+  --ink-900: #1d1d1f;
 
-  /* ---- Surfaces ---- */
-  --paper:        #fbfbfd;  /* page background */
-  --paper-bright: #ffffff;  /* cards */
-  --paper-sunk:   #f5f5f7;  /* alternating panels */
+  /* ---- Brand blue — adjusted for light bg ---- */
+  --blue-300: #5ac8fa;
+  --blue-400: #2997ff;
+  --blue-500: #0077ed;
+  --blue-600: #0066cc;
 
-  /* ---- Accent — DigiPresence blue ---- */
-  --accent-700: #0058b0;
-  --accent-600: #0066cc;   /* text links */
-  --accent-500: #0071e3;   /* primary buttons */
-  --accent-450: #0077ed;   /* button hover */
-  --accent-400: #2997ff;   /* accents on dark surfaces */
-  --accent-100: #e8f1fd;   /* soft tint */
+  /* ---- Semantic aliases ---- */
+  --bg:              #fbfbfd;
+  --bg-alt:          #f5f5f7;
+  --bg-inverse:      #1d1d1f;
+  --surface-card:    #ffffff;
+  --surface-raised:  #f5f5f7;
+  --surface-inverse: #1d1d1f;
 
-  /* ---- Status ---- */
-  --success: #00a85a;  --success-bg: #e7f7ee;
-  --warning: #f08c00;  --warning-bg: #fdf0dd;
-  --danger:  #d70015;  --danger-bg:  #fde8e8;
-  --info:    #0071e3;  --info-bg:    #e8f1fd;
-  --toggle-on: #34c759; /* iOS-style switch */
+  --text-primary:   #1d1d1f;
+  --text-secondary: #48484a;
+  --text-muted:     #636366;
+  --text-inverse:   #ffffff;
+  --text-link:      #0066cc;
 
-  /* ============================================================
-     SEMANTIC ALIASES — prefer these
-     ============================================================ */
-  --bg:            var(--paper);
-  --bg-alt:        var(--ink-50);
-  --bg-inverse:    var(--black);
-  --surface-card:  var(--paper-bright);
-  --surface-raised: var(--paper-bright);
-  --surface-inverse: var(--black);
+  --border-color:  #e8e8ed;
+  --border-subtle: rgba(0,0,0,0.06);
+  --border-strong: rgba(0,0,0,0.20);
 
-  --text-primary:   var(--ink-900);
-  --text-secondary: var(--ink-600);
-  --text-muted:     var(--ink-500);
-  --text-inverse:   #f5f5f7;
-  --text-on-accent: var(--white);
-  --text-link:      var(--accent-600);
+  --action-primary:       #0071e3;
+  --action-primary-hover: #0077ed;
+  --focus-ring:           #0071e3;
 
-  --border-color:   var(--ink-200);
-  --border-subtle:  var(--ink-100);
-  --border-strong:  var(--ink-900);
+  /* ---- Back-compat ---- */
+  --paper:        #fbfbfd;
+  --paper-bright: #ffffff;
+  --paper-sunk:   #f5f5f7;
 
-  --action-primary:       var(--accent-500);
-  --action-primary-hover: var(--accent-450);
-  --action-primary-text:  var(--white);
+  /* ---- Accent aliases ---- */
+  --accent-700: #104fa0;
+  --accent-600: #0066cc;
+  --accent-500: #0071e3;
+  --accent-450: #2997ff;
+  --accent-400: #2997ff;
+  --accent-100: rgba(0,113,227,0.08);
 
-  --focus-ring: var(--accent-500);
+  /* ---- Glow (subtler on light) ---- */
+  --glow-blue:   0 0 16px rgba(0,113,227,0.15), 0 0 4px rgba(0,113,227,0.10);
+  --glow-violet: 0 0 16px rgba(147,51,234,0.15), 0 0 4px rgba(147,51,234,0.10);
+  --glow-brand:  0 0 24px rgba(0,113,227,0.10), 0 0 48px rgba(147,51,234,0.08);
+  --glow-sm:     0 0 10px rgba(0,113,227,0.12);
+
+  --shadow-focus: 0 0 0 3px rgba(0,113,227,0.22);
+
+  /* ---- Header theming ---- */
+  --header-bg:              rgba(251,251,253,0.72);
+  --header-bg-scrolled:     rgba(251,251,253,0.88);
+  --header-border:          transparent;
+  --header-border-scrolled: #e8e8ed;
 }

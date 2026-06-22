@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 /**
- * DigiPresence Button — refined pill control.
- * Primary = solid accent-blue pill. Subtle hover lighten, gentle press scale.
+ * DigiPresence Button — v2 dark-theme particle brand.
+ * Primary = blue→violet gradient pill. Secondary/outline for dark surfaces.
  */
 export function Button({
   variant = 'primary',
@@ -21,18 +21,42 @@ export function Button({
   const [active, setActive] = useState(false);
 
   const sizes = {
-    sm: { height: 36, padding: '0 16px', fontSize: 15, gap: 6, radius: 'var(--radius-pill)' },
-    md: { height: 46, padding: '0 24px', fontSize: 17, gap: 8, radius: 'var(--radius-pill)' },
-    lg: { height: 56, padding: '0 32px', fontSize: 19, gap: 9, radius: 'var(--radius-pill)' },
+    sm: { height: 36, padding: '0 18px', fontSize: 14, gap: 6,  radius: 'var(--radius-pill)' },
+    md: { height: 46, padding: '0 26px', fontSize: 16, gap: 8,  radius: 'var(--radius-pill)' },
+    lg: { height: 56, padding: '0 34px', fontSize: 18, gap: 10, radius: 'var(--radius-pill)' },
   };
   const s = sizes[size] || sizes.md;
 
   const palette = {
-    primary:   { bg: 'var(--accent-500)', bgHover: 'var(--accent-450)', fg: '#fff', border: 'transparent' },
-    secondary: { bg: 'var(--ink-100)', bgHover: 'var(--ink-200)', fg: 'var(--ink-900)', border: 'transparent' },
-    outline:   { bg: 'transparent', bgHover: 'var(--ink-50)', fg: 'var(--ink-900)', border: 'var(--ink-200)' },
-    inverse:   { bg: 'var(--white)', bgHover: '#f0f0f2', fg: 'var(--ink-900)', border: 'transparent' },
-    text:      { bg: 'transparent', bgHover: 'transparent', fg: 'var(--accent-600)', border: 'transparent' },
+    primary: {
+      bg:      'linear-gradient(135deg, #4facfe 0%, #a855f7 100%)',
+      bgHover: 'linear-gradient(135deg, #7ec2fe 0%, #c893ff 100%)',
+      fg: '#ffffff', border: 'transparent',
+      shadow: hover ? 'var(--glow-brand)' : 'none',
+    },
+    secondary: {
+      bg:      hover ? 'rgba(255,255,255,0.11)' : 'rgba(255,255,255,0.07)',
+      bgHover: 'rgba(255,255,255,0.11)',
+      fg: 'var(--text-primary)', border: 'rgba(255,255,255,0.12)',
+      shadow: 'none',
+    },
+    outline: {
+      bg:      hover ? 'rgba(79,172,254,0.08)' : 'transparent',
+      bgHover: 'rgba(79,172,254,0.08)',
+      fg: 'var(--blue-400)', border: 'var(--blue-400)',
+      shadow: hover ? 'var(--glow-sm)' : 'none',
+    },
+    inverse: {
+      bg:      hover ? '#d4d8f5' : 'var(--ink-50)',
+      bgHover: '#d4d8f5',
+      fg: 'var(--canvas)', border: 'transparent',
+      shadow: 'none',
+    },
+    text: {
+      bg: 'transparent', bgHover: 'transparent',
+      fg: hover ? 'var(--blue-300)' : 'var(--blue-400)',
+      border: 'transparent', shadow: 'none',
+    },
   };
   const p = palette[variant] || palette.primary;
   const isText = variant === 'text';
@@ -45,19 +69,21 @@ export function Button({
     height: isText ? 'auto' : s.height,
     padding: isText ? 0 : s.padding,
     width: fullWidth ? '100%' : 'auto',
-    fontFamily: 'var(--font-sans)',
+    fontFamily: 'var(--font-display)',
     fontSize: s.fontSize,
     fontWeight: 500,
     lineHeight: 1,
     color: disabled ? 'var(--ink-400)' : p.fg,
-    background: disabled ? 'var(--ink-100)' : (hover ? p.bgHover : p.bg),
+    background: disabled ? 'rgba(255,255,255,0.06)' : (hover ? p.bgHover : p.bg),
     border: p.border === 'transparent' ? 'none' : `1px solid ${p.border}`,
     borderRadius: isText ? 0 : s.radius,
     cursor: disabled ? 'not-allowed' : 'pointer',
     transform: !disabled && active && !isText ? 'scale(0.97)' : 'scale(1)',
     textDecoration: isText && hover ? 'underline' : 'none',
-    transition: 'background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out)',
+    boxShadow: disabled ? 'none' : p.shadow,
+    transition: 'background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out)',
     whiteSpace: 'nowrap',
+    letterSpacing: '0.01em',
     ...style,
   };
 

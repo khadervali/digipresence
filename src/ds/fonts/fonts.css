@@ -1,5 +1,5 @@
-/* DigiPresence webfonts.
-   The brand type IS the Apple system stack (SF Pro Display / Text), which
-   needs no download on Apple platforms. Inter is loaded as the cross-platform
-   fallback so the look holds on Windows/Android. No local binaries are bundled. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* DigiPresence webfonts — v2
+   Outfit: geometric sans that matches the logo wordmark's clean, modern forms.
+   Inter: body text fallback (legible at small sizes).
+   SF Pro resolves natively on Apple — no download needed. */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');

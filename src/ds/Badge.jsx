@@ -5,7 +5,7 @@ import React from 'react';
  */
 export function Badge({ tone = 'neutral', solid = false, dot = false, children, style = {}, ...rest }) {
   const tones = {
-    neutral: { bg: 'var(--ink-100)', fg: 'var(--ink-700)', solidBg: 'var(--ink-900)', solidFg: '#fff' },
+    neutral: { bg: 'var(--ink-100)', fg: 'var(--ink-700)', solidBg: 'var(--text-primary)', solidFg: 'var(--bg)' },
     accent:  { bg: 'var(--accent-100)', fg: 'var(--accent-600)', solidBg: 'var(--accent-500)', solidFg: '#fff' },
     success: { bg: 'var(--success-bg)', fg: 'var(--success)', solidBg: 'var(--success)', solidFg: '#fff' },
     warning: { bg: 'var(--warning-bg)', fg: 'var(--warning)', solidBg: 'var(--warning)', solidFg: '#fff' },

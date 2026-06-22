@@ -7,7 +7,7 @@ export function Switch({ checked = false, onChange, disabled = false, label, id,
   const switchId = id || `dp-switch-${Math.random().toString(36).slice(2, 8)}`;
   const track = {
     width: 50, height: 30, borderRadius: 999, flex: 'none', border: 'none',
-    background: checked ? 'var(--toggle-on)' : 'var(--ink-200)',
+    background: checked ? 'var(--toggle-on)' : 'var(--border-strong)',
     position: 'relative', cursor: disabled ? 'not-allowed' : 'pointer',
     transition: 'background var(--dur) var(--ease-out)',
     opacity: disabled ? 0.6 : 1, padding: 0,

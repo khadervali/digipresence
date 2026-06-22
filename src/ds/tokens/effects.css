@@ -1,7 +1,6 @@
 /* ============================================================
-   DigiPresence · EFFECTS — refined / Apple-grade
-   No hard borders or offset shadows. Hairlines, soft depth,
-   smooth motion. Restraint over decoration.
+   DigiPresence · EFFECTS — v2  dark-theme glows + motion
+   Colored box-shadows echo the blue↔violet particle brand.
    ============================================================ */
 :root {
   /* ---- Radii ---- */
@@ -12,22 +11,30 @@
   --radius-lg:   18px;
   --radius-xl:   24px;
   --radius-2xl:  30px;
-  --radius-pill: 980px;   /* Apple pill buttons */
+  --radius-pill: 980px;
 
   /* ---- Borders ---- */
   --border-hairline: 1px;
   --border:          1px;
   --border-bold:     1.5px;
 
-  /* ---- Shadows — soft, low-contrast, diffuse ---- */
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-  --shadow-md: 0 6px 22px rgba(0,0,0,0.07);
-  --shadow-lg: 0 14px 44px rgba(0,0,0,0.10);
-  --shadow-nav: 0 2px 20px rgba(0,0,0,0.06);   /* floating header */
-  --shadow-focus: 0 0 0 4px rgba(0,113,227,0.28);
+  /* ---- Shadows — dark-optimised, slightly elevated ---- */
+  --shadow-xs: 0 1px 3px  rgba(0,0,0,0.55);
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.60);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.65);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.70);
+  --shadow-nav: 0 2px 20px rgba(0,0,0,0.60);
 
-  /* ---- Motion (Apple easing) ---- */
+  /* ---- Glow — brand particle energy ---- */
+  --glow-blue:   0 0 20px rgba(79,172,254,0.30),  0 0 6px rgba(79,172,254,0.20);
+  --glow-violet: 0 0 20px rgba(168,85,247,0.30),  0 0 6px rgba(168,85,247,0.20);
+  --glow-brand:  0 0 30px rgba(79,172,254,0.22),  0 0 60px rgba(168,85,247,0.16);
+  --glow-sm:     0 0 12px rgba(79,172,254,0.25);
+
+  /* ---- Focus ring ---- */
+  --shadow-focus: 0 0 0 3px rgba(79,172,254,0.45);
+
+  /* ---- Motion (keeping Apple easing — timeless) ---- */
   --dur-fast:  180ms;  /* @kind other */
   --dur:       320ms;  /* @kind other */
   --dur-slow:  560ms;  /* @kind other */
@@ -36,6 +43,6 @@
   --ease-emph:   cubic-bezier(0.16, 1, 0.3, 1);     /* @kind other */
 
   /* ---- Focus ---- */
-  --focus-width: 4px;
+  --focus-width: 3px;
   --focus-offset: 2px;
 }

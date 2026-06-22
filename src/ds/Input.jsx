@@ -9,7 +9,7 @@ export function Input({
 }) {
   const [focus, setFocus] = useState(false);
   const inputId = id || `dp-input-${Math.random().toString(36).slice(2, 8)}`;
-  const borderColor = error ? 'var(--danger)' : (focus ? 'var(--accent-500)' : 'var(--ink-200)');
+  const borderColor = error ? 'var(--danger)' : (focus ? 'var(--accent-500)' : 'var(--border-color)');
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 7, fontFamily: 'var(--font-sans)', ...containerStyle }}>
