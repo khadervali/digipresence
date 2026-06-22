@@ -84,6 +84,13 @@ const longformBySlug = {
         'We combine strategic depth with direct implementation, so clients are never left with disconnected recommendations. Every project is structured around clarity, fast iteration, and measurable commercial impact.',
       ],
     },
+    {
+      heading: 'The Team Behind Your Growth',
+      paragraphs: [
+        'Our team is built around specialists who take ownership of outcomes. Each person brings deep functional expertise and a commitment to clear communication, so projects stay aligned with business goals and timelines.',
+        'We invest in ongoing learning and client relationships over project churn. This stability means your team develops institutional knowledge about your business, improving recommendations and execution quality over time.',
+      ],
+    },
   ],
   contact: [
     {
@@ -517,6 +524,51 @@ export default function SeoPage({ slug }) {
         <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 22 }}>SEO and GEO keyword intent</h2>
         <p style={{ margin: '10px 0 0', color: 'var(--text-secondary)' }}>{content.keywords}</p>
       </section>
+
+      {content.team && content.team.length > 0 && (
+        <section style={{ marginTop: 16 }}>
+          <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 32, letterSpacing: '-0.02em', marginBottom: 18 }}>Meet the team</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14 }}>
+            {content.team.map((member) => (
+              <article
+                key={member.name}
+                style={{
+                  background: 'var(--paper-bright)',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: 'var(--radius-xl)',
+                  padding: '22px 20px',
+                  overflow: 'hidden',
+                  position: 'relative',
+                }}
+              >
+                <div style={{ position: 'absolute', right: -26, top: -26, width: 86, height: 86, borderRadius: '50%', background: 'rgba(79,172,254,0.12)' }} />
+                <div style={{ position: 'relative', zIndex: 1 }}>
+                  <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 22, letterSpacing: '-0.01em' }}>{member.name}</h3>
+                  <p style={{ margin: '4px 0 12px', fontSize: 14, fontWeight: 600, color: 'var(--accent-600)' }}>{member.role}</p>
+                  <p style={{ margin: 0, fontSize: 15, color: 'var(--ink-700)', lineHeight: 1.7, marginBottom: 12 }}>{member.bio}</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {member.expertise.map((skill) => (
+                      <span
+                        key={skill}
+                        style={{
+                          borderRadius: 'var(--radius-lg)',
+                          background: 'rgba(79,172,254,0.14)',
+                          color: 'var(--blue-600)',
+                          fontSize: 12,
+                          fontWeight: 500,
+                          padding: '3px 8px',
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {(slug === 'about' || slug === 'contact') && <LeadInlineForm variant={slug} />}
     </main>

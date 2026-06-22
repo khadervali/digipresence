@@ -140,6 +140,32 @@ export const pageContent = {
       },
     ],
     keywords: 'about digital marketing agency, small business digital partner, SEO and social growth agency',
+    team: [
+      {
+        name: 'Suresh Kalava',
+        role: 'Founder & Growth Strategist',
+        bio: 'Suresh leads strategy and client growth, bringing 8+ years of digital marketing execution across SaaS and service businesses. He specializes in SEO, growth architecture, and building repeatable systems.',
+        expertise: ['Growth strategy', 'SEO architecture', 'Team building'],
+      },
+      {
+        name: 'Priya Sharma',
+        role: 'Design & Product Lead',
+        bio: 'Priya directs website design and product strategy with a focus on conversion flows and brand identity. Her process balances aesthetics with measurable business impact.',
+        expertise: ['Web design', 'Conversion optimization', 'Product strategy'],
+      },
+      {
+        name: 'Arjun Mehta',
+        role: 'Content & SEO Specialist',
+        bio: 'Arjun builds SEO-driven content systems and executes technical optimizations. He combines keyword research with strategic narrative to improve search visibility and brand authority.',
+        expertise: ['Technical SEO', 'Content strategy', 'Copywriting'],
+      },
+      {
+        name: 'Nisha Patel',
+        role: 'Social & Community Manager',
+        bio: 'Nisha manages social channels and community growth with a focus on authentic engagement and brand voice. She turns audience insights into content that drives awareness and loyalty.',
+        expertise: ['Social media management', 'Community building', 'Content creation'],
+      },
+    ],
   },
   careers: {
     title: 'Careers at DigiPresence',
