@@ -35,6 +35,23 @@ Preview the production build:
 npm run preview
 ```
 
+## Deploy to Hostinger Node App
+
+1. Copy the env template and fill your server values:
+
+```bash
+cp .env.hostinger.example .env.hostinger
+```
+
+2. Make sure your Hostinger server can access the GitHub repo (SSH key or HTTPS auth).
+3. Run deployment from your machine:
+
+```bash
+npm run deploy:hostinger
+```
+
+The script will SSH to your Hostinger server, clone/pull the selected branch, run install/build commands, and optionally restart your app (for example with PM2).
+
 ## Project structure
 
 - `src/components/Header.jsx` - sticky navigation and primary CTA.
