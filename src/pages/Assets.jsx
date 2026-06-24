@@ -16,9 +16,11 @@ const SVG = {
   <circle cx="920" cy="-30" r="260" fill="none" stroke="#4facfe" stroke-width="70" opacity="0.07"/>
   <circle cx="1010" cy="545" r="190" fill="none" stroke="#a855f7" stroke-width="55" opacity="0.07"/>
   <rect x="0" y="0" width="1050" height="5" fill="url(#br0)" rx="2"/>
-  <text x="64" y="82" font-family="Arial,sans-serif" font-weight="300" font-size="32" fill="#eef0ff">Digi</text>
-  <text x="128" y="82" font-family="Arial,sans-serif" font-weight="700" font-size="32" fill="#4facfe">Prezence</text>
-  <rect x="64" y="98" width="80" height="2.5" fill="url(#br0)" rx="1.5"/>
+  <g transform="translate(64 42)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <g opacity="0.14" fill="#4facfe">
     <circle cx="700" cy="210" r="2.5"/><circle cx="730" cy="210" r="2.5"/><circle cx="760" cy="210" r="2.5"/><circle cx="790" cy="210" r="2.5"/><circle cx="820" cy="210" r="2.5"/>
     <circle cx="700" cy="240" r="2.5"/><circle cx="730" cy="240" r="2.5"/><circle cx="760" cy="240" r="2.5"/><circle cx="790" cy="240" r="2.5"/><circle cx="820" cy="240" r="2.5"/>
@@ -53,8 +55,11 @@ const SVG = {
   <circle cx="860" cy="460" r="200" fill="none" stroke="#a855f7" stroke-width="55" opacity="0.06"/>
   <rect x="0" y="0" width="1050" height="5" fill="url(#br1)" rx="2"/>
   <rect x="0" y="595" width="1050" height="5" fill="url(#br1)" rx="2"/>
-  <text x="64" y="82" font-family="Arial,sans-serif" font-weight="300" font-size="32" fill="rgba(255,255,255,0.55)">Digi</text>
-  <text x="128" y="82" font-family="Arial,sans-serif" font-weight="700" font-size="32" fill="#4facfe">Prezence</text>
+  <g transform="translate(64 42)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <text x="525" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#eef0ff">Your brand,</text>
   <text x="525" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-weight="300" font-size="58" fill="rgba(238,240,255,0.75)">impossible to ignore.</text>
   <rect x="412" y="346" width="226" height="2" fill="url(#br1)" rx="1"/>
@@ -78,10 +83,11 @@ const SVG = {
   <circle cx="120" cy="140" r="180" fill="none" stroke="#4facfe" stroke-width="50" opacity="0.08"/>
   <circle cx="690" cy="660" r="160" fill="none" stroke="#a855f7" stroke-width="45" opacity="0.08"/>
   <circle cx="400" cy="400" r="310" fill="none" stroke="url(#br2)" stroke-width="3.5" opacity="0.6"/>
-  <text x="400" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="200" fill="#eef0ff" opacity="0.95">DP</text>
-  <text x="400" y="470" text-anchor="middle" font-family="Arial,sans-serif" font-weight="300" font-size="34" fill="rgba(238,240,255,0.55)" letter-spacing="2">Digi</text>
-  <text x="400" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="34" fill="#4facfe" letter-spacing="1">Prezence</text>
-  <rect x="310" y="538" width="180" height="2" fill="url(#br2)" rx="1"/>
+  <g transform="translate(240 230) scale(5)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
 </svg>`,
 
   linkedinBanner: `<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
@@ -108,9 +114,11 @@ const SVG = {
     <circle cx="960" cy="180" r="2.5"/><circle cx="990" cy="180" r="2.5"/><circle cx="1020" cy="180" r="2.5"/><circle cx="1050" cy="180" r="2.5"/>
     <circle cx="960" cy="210" r="2.5"/><circle cx="990" cy="210" r="2.5"/><circle cx="1020" cy="210" r="2.5"/><circle cx="1050" cy="210" r="2.5"/>
   </g>
-  <text x="72" y="82" font-family="Arial,sans-serif" font-weight="300" font-size="28" fill="rgba(238,240,255,0.6)">Digi</text>
-  <text x="132" y="82" font-family="Arial,sans-serif" font-weight="700" font-size="28" fill="#4facfe">Prezence</text>
-  <rect x="72" y="98" width="68" height="2" fill="url(#br3)" rx="1"/>
+  <g transform="translate(72 46) scale(0.9)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <text x="72" y="190" font-family="Arial,sans-serif" font-weight="700" font-size="64" fill="#eef0ff">Your brand,</text>
   <text x="72" y="264" font-family="Arial,sans-serif" font-weight="300" font-size="64" fill="rgba(238,240,255,0.7)">impossible to ignore.</text>
   <text x="72" y="336" font-family="Arial,sans-serif" font-weight="400" font-size="20" fill="#8892cc" letter-spacing="0.5">Websites · Social · Strategy · Paid Ads</text>
@@ -134,9 +142,11 @@ const SVG = {
   <circle cx="200" cy="900" r="300" fill="none" stroke="#a855f7" stroke-width="75" opacity="0.07"/>
   <rect x="0" y="0" width="1080" height="6" fill="url(#br4)"/>
   <rect x="0" y="1074" width="1080" height="6" fill="url(#br4)"/>
-  <text x="64" y="130" font-family="Arial,sans-serif" font-weight="300" font-size="38" fill="rgba(238,240,255,0.55)">Digi</text>
-  <text x="148" y="130" font-family="Arial,sans-serif" font-weight="700" font-size="38" fill="#4facfe">Prezence</text>
-  <rect x="64" y="150" width="92" height="2.5" fill="url(#br4)" rx="1.5"/>
+  <g transform="translate(64 82) scale(1.2)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <text x="64" y="440" font-family="Arial,sans-serif" font-weight="700" font-size="88" fill="#eef0ff">Your</text>
   <text x="64" y="540" font-family="Arial,sans-serif" font-weight="700" font-size="88" fill="#eef0ff">brand,</text>
   <text x="64" y="640" font-family="Arial,sans-serif" font-weight="300" font-size="88" fill="rgba(238,240,255,0.7)">impossible</text>
@@ -166,7 +176,11 @@ const SVG = {
   <circle cx="880" cy="880" r="280" fill="none" stroke="#a855f7" stroke-width="70" opacity="0.08"/>
   <rect x="0" y="0" width="6" height="1080" fill="url(#br5)"/>
   <rect x="1074" y="0" width="6" height="1080" fill="url(#br5)"/>
-  <text x="540" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-weight="300" font-size="42" fill="rgba(238,240,255,0.5)" letter-spacing="6">DIGIPREZENCE</text>
+  <g transform="translate(450 220) scale(2.8)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <rect x="390" y="346" width="300" height="2" fill="url(#br5)" rx="1"/>
   <text x="540" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="118" fill="#eef0ff">3.2×</text>
   <text x="540" y="576" text-anchor="middle" font-family="Arial,sans-serif" font-weight="400" font-size="34" fill="#4facfe">average visibility lift</text>
@@ -196,9 +210,11 @@ const SVG = {
   <circle cx="960" cy="520" r="320" fill="none" stroke="#a855f7" stroke-width="80" opacity="0.07"/>
   <circle cx="540" cy="1600" r="360" fill="none" stroke="#4facfe" stroke-width="80" opacity="0.06"/>
   <rect x="0" y="0" width="1080" height="6" fill="url(#br6)"/>
-  <text x="80" y="148" font-family="Arial,sans-serif" font-weight="300" font-size="44" fill="rgba(238,240,255,0.6)">Digi</text>
-  <text x="180" y="148" font-family="Arial,sans-serif" font-weight="700" font-size="44" fill="#4facfe">Prezence</text>
-  <rect x="80" y="170" width="100" height="3" fill="url(#br6)" rx="1.5"/>
+  <g transform="translate(80 92) scale(1.3)">
+    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
+    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
+  </g>
   <text x="80" y="580" font-family="Arial,sans-serif" font-weight="700" font-size="120" fill="#eef0ff">Your</text>
   <text x="80" y="710" font-family="Arial,sans-serif" font-weight="700" font-size="120" fill="#eef0ff">brand,</text>
   <text x="80" y="840" font-family="Arial,sans-serif" font-weight="300" font-size="100" fill="rgba(238,240,255,0.75)">impossible</text>
