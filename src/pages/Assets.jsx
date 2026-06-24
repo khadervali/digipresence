@@ -1,4 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+
+const markUrl = new URL('../assets/mark.png', import.meta.url).href;
 
 // ─── SVG Definitions ─────────────────────────────────────────────────────────
 
@@ -16,11 +18,7 @@ const SVG = {
   <circle cx="920" cy="-30" r="260" fill="none" stroke="#4facfe" stroke-width="70" opacity="0.07"/>
   <circle cx="1010" cy="545" r="190" fill="none" stroke="#a855f7" stroke-width="55" opacity="0.07"/>
   <rect x="0" y="0" width="1050" height="5" fill="url(#br0)" rx="2"/>
-  <g transform="translate(64 42)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="64" y="42" width="64" height="64" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <g opacity="0.14" fill="#4facfe">
     <circle cx="700" cy="210" r="2.5"/><circle cx="730" cy="210" r="2.5"/><circle cx="760" cy="210" r="2.5"/><circle cx="790" cy="210" r="2.5"/><circle cx="820" cy="210" r="2.5"/>
     <circle cx="700" cy="240" r="2.5"/><circle cx="730" cy="240" r="2.5"/><circle cx="760" cy="240" r="2.5"/><circle cx="790" cy="240" r="2.5"/><circle cx="820" cy="240" r="2.5"/>
@@ -55,11 +53,7 @@ const SVG = {
   <circle cx="860" cy="460" r="200" fill="none" stroke="#a855f7" stroke-width="55" opacity="0.06"/>
   <rect x="0" y="0" width="1050" height="5" fill="url(#br1)" rx="2"/>
   <rect x="0" y="595" width="1050" height="5" fill="url(#br1)" rx="2"/>
-  <g transform="translate(64 42)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="64" y="42" width="64" height="64" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <text x="525" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#eef0ff">Your brand,</text>
   <text x="525" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-weight="300" font-size="58" fill="rgba(238,240,255,0.75)">impossible to ignore.</text>
   <rect x="412" y="346" width="226" height="2" fill="url(#br1)" rx="1"/>
@@ -83,11 +77,7 @@ const SVG = {
   <circle cx="120" cy="140" r="180" fill="none" stroke="#4facfe" stroke-width="50" opacity="0.08"/>
   <circle cx="690" cy="660" r="160" fill="none" stroke="#a855f7" stroke-width="45" opacity="0.08"/>
   <circle cx="400" cy="400" r="310" fill="none" stroke="url(#br2)" stroke-width="3.5" opacity="0.6"/>
-  <g transform="translate(240 230) scale(5)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="240" y="230" width="320" height="320" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
 </svg>`,
 
   linkedinBanner: `<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
@@ -114,11 +104,7 @@ const SVG = {
     <circle cx="960" cy="180" r="2.5"/><circle cx="990" cy="180" r="2.5"/><circle cx="1020" cy="180" r="2.5"/><circle cx="1050" cy="180" r="2.5"/>
     <circle cx="960" cy="210" r="2.5"/><circle cx="990" cy="210" r="2.5"/><circle cx="1020" cy="210" r="2.5"/><circle cx="1050" cy="210" r="2.5"/>
   </g>
-  <g transform="translate(72 46) scale(0.9)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="72" y="46" width="58" height="58" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <text x="72" y="190" font-family="Arial,sans-serif" font-weight="700" font-size="64" fill="#eef0ff">Your brand,</text>
   <text x="72" y="264" font-family="Arial,sans-serif" font-weight="300" font-size="64" fill="rgba(238,240,255,0.7)">impossible to ignore.</text>
   <text x="72" y="336" font-family="Arial,sans-serif" font-weight="400" font-size="20" fill="#8892cc" letter-spacing="0.5">Websites · Social · Strategy · Paid Ads</text>
@@ -142,11 +128,7 @@ const SVG = {
   <circle cx="200" cy="900" r="300" fill="none" stroke="#a855f7" stroke-width="75" opacity="0.07"/>
   <rect x="0" y="0" width="1080" height="6" fill="url(#br4)"/>
   <rect x="0" y="1074" width="1080" height="6" fill="url(#br4)"/>
-  <g transform="translate(64 82) scale(1.2)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="64" y="82" width="76" height="76" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <text x="64" y="440" font-family="Arial,sans-serif" font-weight="700" font-size="88" fill="#eef0ff">Your</text>
   <text x="64" y="540" font-family="Arial,sans-serif" font-weight="700" font-size="88" fill="#eef0ff">brand,</text>
   <text x="64" y="640" font-family="Arial,sans-serif" font-weight="300" font-size="88" fill="rgba(238,240,255,0.7)">impossible</text>
@@ -176,11 +158,7 @@ const SVG = {
   <circle cx="880" cy="880" r="280" fill="none" stroke="#a855f7" stroke-width="70" opacity="0.08"/>
   <rect x="0" y="0" width="6" height="1080" fill="url(#br5)"/>
   <rect x="1074" y="0" width="6" height="1080" fill="url(#br5)"/>
-  <g transform="translate(450 220) scale(2.8)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="450" y="220" width="180" height="180" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <rect x="390" y="346" width="300" height="2" fill="url(#br5)" rx="1"/>
   <text x="540" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="118" fill="#eef0ff">3.2×</text>
   <text x="540" y="576" text-anchor="middle" font-family="Arial,sans-serif" font-weight="400" font-size="34" fill="#4facfe">average visibility lift</text>
@@ -210,11 +188,7 @@ const SVG = {
   <circle cx="960" cy="520" r="320" fill="none" stroke="#a855f7" stroke-width="80" opacity="0.07"/>
   <circle cx="540" cy="1600" r="360" fill="none" stroke="#4facfe" stroke-width="80" opacity="0.06"/>
   <rect x="0" y="0" width="1080" height="6" fill="url(#br6)"/>
-  <g transform="translate(80 92) scale(1.3)">
-    <circle cx="22" cy="32" r="6" fill="#4facfe"></circle>
-    <path d="M31 21.3 A14 14 0 0 1 31 42.7" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-    <path d="M36.8 14.4 A23 23 0 0 1 36.8 49.6" fill="none" stroke="#eef0ff" stroke-width="5" stroke-linecap="round"></path>
-  </g>
+  <image x="80" y="92" width="84" height="84" href="__LOGO_HREF__" preserveAspectRatio="xMidYMid meet"/>
   <text x="80" y="580" font-family="Arial,sans-serif" font-weight="700" font-size="120" fill="#eef0ff">Your</text>
   <text x="80" y="710" font-family="Arial,sans-serif" font-weight="700" font-size="120" fill="#eef0ff">brand,</text>
   <text x="80" y="840" font-family="Arial,sans-serif" font-weight="300" font-size="100" fill="rgba(238,240,255,0.75)">impossible</text>
@@ -307,8 +281,12 @@ const CATEGORIES = ['All', 'Business', 'Social Media'];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-function downloadSVG(asset) {
-  const blob = new Blob([asset.svg], { type: 'image/svg+xml;charset=utf-8' });
+function injectLogo(svgString, logoHref) {
+  return svgString.replaceAll('__LOGO_HREF__', logoHref);
+}
+
+function downloadSVG(asset, logoHref) {
+  const blob = new Blob([injectLogo(asset.svg, logoHref)], { type: 'image/svg+xml;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -325,15 +303,15 @@ function svgDataUrl(svgString) {
 
 // ─── Asset Card ───────────────────────────────────────────────────────────────
 
-function AssetCard({ asset }) {
+function AssetCard({ asset, logoHref }) {
   const [downloaded, setDownloaded] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const handleDownload = useCallback(() => {
-    downloadSVG(asset);
+    downloadSVG(asset, logoHref);
     setDownloaded(true);
     setTimeout(() => setDownloaded(false), 2200);
-  }, [asset]);
+  }, [asset, logoHref]);
 
   // Preview box height derived from aspect ratio, capped
   const previewH = Math.min(240, Math.round(280 / asset.aspect));
@@ -366,7 +344,7 @@ function AssetCard({ asset }) {
         overflow: 'hidden',
       }}>
         <img
-          src={svgDataUrl(asset.svg)}
+          src={svgDataUrl(injectLogo(asset.svg, logoHref))}
           alt={asset.name}
           style={{
             width: '100%',
@@ -456,11 +434,11 @@ function AssetCard({ asset }) {
 
 // ─── Download All Button ──────────────────────────────────────────────────────
 
-function DownloadAllButton({ assets }) {
+function DownloadAllButton({ assets, logoHref }) {
   const [active, setActive] = useState(false);
   const handle = () => {
     setActive(true);
-    assets.forEach((a, i) => setTimeout(() => downloadSVG(a), i * 180));
+    assets.forEach((a, i) => setTimeout(() => downloadSVG(a, logoHref), i * 180));
     setTimeout(() => setActive(false), assets.length * 180 + 1000);
   };
   return (
@@ -491,7 +469,34 @@ function DownloadAllButton({ assets }) {
 
 export default function AssetsPage() {
   const [active, setActive] = useState('All');
+  const [logoHref, setLogoHref] = useState(markUrl);
   const filtered = active === 'All' ? ASSETS : ASSETS.filter((a) => a.category === active);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(markUrl)
+      .then((res) => res.blob())
+      .then(
+        (blob) =>
+          new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.readAsDataURL(blob);
+          })
+      )
+      .then((dataUrl) => {
+        if (!cancelled && typeof dataUrl === 'string') {
+          setLogoHref(dataUrl);
+        }
+      })
+      .catch(() => {
+        // Fallback keeps runtime path if data-url conversion is unavailable.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <main style={{ maxWidth: 1080, margin: '0 auto', padding: '74px 22px 120px' }}>
@@ -558,7 +563,7 @@ export default function AssetsPage() {
             </button>
           ))}
         </div>
-        <DownloadAllButton assets={filtered} />
+        <DownloadAllButton assets={filtered} logoHref={logoHref} />
       </div>
 
       {/* Grid */}
@@ -568,7 +573,7 @@ export default function AssetsPage() {
         gap: 18,
       }}>
         {filtered.map((asset) => (
-          <AssetCard key={asset.id} asset={asset} />
+          <AssetCard key={asset.id} asset={asset} logoHref={logoHref} />
         ))}
       </div>
 
