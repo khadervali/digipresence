@@ -8,6 +8,7 @@ import Cta from './components/Cta';
 import Footer from './components/Footer';
 import StartModal from './components/StartModal';
 import SeoPage from './pages/SeoPage';
+import AssetsPage from './pages/Assets';
 
 function GlobalClickRipple({ ripples }) {
   return (
@@ -141,6 +142,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage onStart={() => setStartOpen(true)} />} />
         <Route path="/pages/:slug" element={<SeoPageRoute />} />
+        <Route path="/assets" element={<AssetsPage />} />
         <Route path="*" element={<SeoPage slug="" />} />
       </Routes>
       <Footer />

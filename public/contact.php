@@ -44,7 +44,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = getenv('DP_LEADS_EMAIL') ?: 'hello@digipresence.in';
+$to = 'khadervali4u@gmail.com';
 $subject = 'New DigiPresence Lead';
 
 $messageLines = [

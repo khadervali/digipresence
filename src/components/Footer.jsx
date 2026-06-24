@@ -26,6 +26,7 @@ const cols = [
       { label: 'Guides', href: '/#/pages/guides' },
       { label: 'Pricing', href: '/#/pages/pricing' },
       { label: 'Support', href: '/#/pages/support' },
+      { label: 'Brand Assets', href: '/#/assets' },
     ],
   },
 ];
