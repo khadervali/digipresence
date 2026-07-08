@@ -10,8 +10,14 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: *
 Allow: /
-Disallow: /assets/
+Disallow: /static/
 
-Sitemap: https://digiprezence.com/sitemap.xml
+Sitemap: https://www.digiprezence.com/sitemap.xml
