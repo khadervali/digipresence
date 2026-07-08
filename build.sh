@@ -9,4 +9,5 @@ if [ ! -f "$ROOT/package.json" ]; then
 fi
 
 cd "$ROOT"
-npm run build
+npm install 2>&1
+NODE_ENV=development npm run build

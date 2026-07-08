@@ -1,0 +1,2 @@
+# SPA catch-all: serve index.html for all non-file, non-asset routes
+/*  /index.html  200

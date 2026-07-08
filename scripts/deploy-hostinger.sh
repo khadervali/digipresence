@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# IMPORTANT: For SPA routing, ensure your server serves index.html for all paths.
+# Apache/LiteSpeed: The public/.htaccess file handles this automatically.
+# Nginx: Copy hostinger/nginx-digiprezence.conf to sites-available and reload:
+#   HOSTINGER_POST_DEPLOY_CMD="sudo cp hostinger/nginx-digiprezence.conf /etc/nginx/sites-available/digiprezence && sudo ln -sf /etc/nginx/sites-available/digiprezence /etc/nginx/sites-enabled/ && sudo nginx -s reload"
+# See hostinger/nginx-digiprezence.conf for details.
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ENV_FILE="${ENV_FILE:-$ROOT_DIR/.env.hostinger}"
 
