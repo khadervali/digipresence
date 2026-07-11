@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const markUrl = new URL('../assets/mark.png', import.meta.url).href;
 
@@ -500,6 +501,10 @@ export default function AssetsPage() {
 
   return (
     <main style={{ maxWidth: 1080, margin: '0 auto', padding: '74px 22px 120px' }}>
+      <Helmet>
+        <title>Brand Assets | DigiPrezence</title>
+        <link rel="canonical" href="https://digiprezence.com/assets" />
+      </Helmet>
 
       {/* Hero */}
       <section style={{

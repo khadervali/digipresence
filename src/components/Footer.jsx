@@ -1,40 +1,42 @@
+import { Link } from 'react-router-dom';
+
 const markUrl = new URL('../assets/mark.png', import.meta.url).href;
 
 const cols = [
   {
     h: 'Services',
     items: [
-      { label: 'Web & Product', href: '/#/pages/web-product-services' },
-      { label: 'Social & Content', href: '/#/pages/social-content-services' },
-      { label: 'Talent & Consultancy', href: '/#/pages/talent-consultancy-services' },
-      { label: 'Paid Ads', href: '/#/pages/paid-ads-services' },
+      { label: 'Web & Product', href: '/web-product-services' },
+      { label: 'Social & Content', href: '/social-content-services' },
+      { label: 'Talent & Consultancy', href: '/talent-consultancy-services' },
+      { label: 'Paid Ads', href: '/paid-ads-services' },
     ],
   },
   {
     h: 'Company',
     items: [
-      { label: 'Work', href: '/#/pages/work' },
-      { label: 'About', href: '/#/pages/about' },
-      { label: 'Careers', href: '/#/pages/careers' },
-      { label: 'Contact', href: '/#/pages/contact' },
+      { label: 'Work', href: '/work' },
+      { label: 'About', href: '/about' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
   {
     h: 'Resources',
     items: [
-      { label: 'Blog', href: '/#/pages/blog' },
-      { label: 'Guides', href: '/#/pages/guides' },
-      { label: 'Pricing', href: '/#/pages/pricing' },
-      { label: 'Support', href: '/#/pages/support' },
-      { label: 'Brand Assets', href: '/#/assets' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Support', href: '/support' },
+      { label: 'Brand Assets', href: '/assets' },
     ],
   },
 ];
 
 const legalLinks = [
-  { label: 'Privacy', href: '/#/pages/privacy' },
-  { label: 'Terms', href: '/#/pages/terms' },
-  { label: 'Cookies', href: '/#/pages/cookies' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
+  { label: 'Cookies', href: '/cookies' },
 ];
 
 export default function Footer() {
@@ -72,7 +74,7 @@ export default function Footer() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
               {c.items.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} style={{ fontSize: 14, color: 'var(--ink-500)', textDecoration: 'none' }}>{item.label}</a>
+                  <Link to={item.href} style={{ fontSize: 14, color: 'var(--ink-500)', textDecoration: 'none' }}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -94,7 +96,7 @@ export default function Footer() {
           <span>© 2026 DigiPrezence. All rights reserved.</span>
           <span style={{ display: 'flex', gap: 22 }}>
             {legalLinks.map((l) => (
-              <a key={l.label} href={l.href} style={{ color: 'var(--ink-500)', textDecoration: 'none' }}>{l.label}</a>
+              <Link key={l.label} to={l.href} style={{ color: 'var(--ink-500)', textDecoration: 'none' }}>{l.label}</Link>
             ))}
           </span>
         </div>

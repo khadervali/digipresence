@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -9,6 +10,26 @@ import Footer from './components/Footer';
 import StartModal from './components/StartModal';
 import SeoPage from './pages/SeoPage';
 import AssetsPage from './pages/Assets';
+
+const pageMap = [
+  'web-product-services',
+  'social-content-services',
+  'talent-consultancy-services',
+  'paid-ads-services',
+  'work',
+  'about',
+  'blog',
+  'guides',
+  'pricing',
+  'contact',
+  'support',
+  'privacy',
+  'terms',
+  'cookies',
+  'careers',
+];
+
+
 
 function GlobalClickRipple({ ripples }) {
   return (
@@ -60,12 +81,21 @@ function SeoPageRoute() {
 function HomePage({ onStart }) {
   return (
     <main>
+      <Helmet>
+        <title>DigiPrezence | Premium digital presence for small businesses</title>
+        <link rel="canonical" href="https://digiprezence.com" />
+      </Helmet>
       <Hero onStart={onStart} />
       <Services />
       <Work />
       <Cta onStart={onStart} />
     </main>
   );
+}
+
+function SeoPageCatchAll() {
+  const pathname = useLocation().pathname.replace(/^\//, '');
+  return <SeoPage slug={pageMap.includes(pathname) ? pathname : ''} />;
 }
 
 export default function App() {
@@ -141,9 +171,12 @@ export default function App() {
       <Header onStart={() => setStartOpen(true)} onNav={nav} theme={theme} onToggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<HomePage onStart={() => setStartOpen(true)} />} />
+        {pageMap.map((slug) => (
+          <Route key={slug} path={`/${slug}`} element={<SeoPage slug={slug} />} />
+        ))}
         <Route path="/pages/:slug" element={<SeoPageRoute />} />
         <Route path="/assets" element={<AssetsPage />} />
-        <Route path="*" element={<SeoPage slug="" />} />
+        <Route path="*" element={<SeoPageCatchAll />} />
       </Routes>
       <Footer />
       <StartModal open={location.pathname === '/' && startOpen} onClose={() => setStartOpen(false)} />

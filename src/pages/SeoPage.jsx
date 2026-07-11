@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button, Input } from '../designSystem';
 import { pageContent } from './pageContent';
 
@@ -366,16 +367,13 @@ export default function SeoPage({ slug }) {
   }, [content]);
 
   useEffect(() => {
-    if (!content) {
-      document.title = 'Page Not Found | DigiPresence';
+    if (content) {
+      ensureMetaTag('description').setAttribute('content', content.description);
+      ensureMetaTag('keywords').setAttribute('content', content.keywords);
+    } else {
       ensureMetaTag('description').setAttribute('content', 'The requested page was not found on DigiPresence.');
       ensureMetaTag('keywords').setAttribute('content', 'digi presence, page not found');
-      return;
     }
-
-    document.title = `${content.title} | DigiPresence`;
-    ensureMetaTag('description').setAttribute('content', content.description);
-    ensureMetaTag('keywords').setAttribute('content', content.keywords);
   }, [content]);
 
   const breadcrumbPaths = {
@@ -494,6 +492,10 @@ export default function SeoPage({ slug }) {
   if (!content) {
     return (
       <main style={{ maxWidth: 960, margin: '0 auto', padding: '88px 22px 96px' }}>
+        <Helmet>
+          <title>Page Not Found | DigiPrezence</title>
+          <link rel="canonical" href={`https://digiprezence.com/${slug}`} />
+        </Helmet>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px,5vw,56px)', margin: 0 }}>Page not found</h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: 18, marginTop: 16 }}>
           The page you are looking for does not exist. Please return to the home page.
@@ -503,8 +505,15 @@ export default function SeoPage({ slug }) {
     );
   }
 
+  const pageTitle = content ? `${content.title} | DigiPresence` : `Page Not Found | DigiPresence`;
+  const pageUrl = content ? `https://digiprezence.com/${slug}` : `https://digiprezence.com/${slug}`;
+
   return (
     <main style={{ maxWidth: 1040, margin: '0 auto', padding: '74px 22px 96px' }}>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <link rel="canonical" href={pageUrl} />
+      </Helmet>
       <section
         style={{
           position: 'relative',
