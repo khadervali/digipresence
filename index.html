@@ -13,18 +13,46 @@
     <meta property="og:image" content="https://digiprezence.com/src/assets/mark.png">
     <meta name="twitter:card" content="summary_large_image">
     <title>DigiPrezence | Premium digital presence for small businesses</title>
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="DigiPrezence">
+    <link rel="canonical" href="https://digiprezence.com">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://digiprezence.com/#website",
+      "name": "DigiPrezence",
+      "url": "https://digiprezence.com",
+      "description": "DigiPrezence provides premium web design, SEO, GEO, social media management, and paid ads services for ambitious small businesses.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://digiprezence.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://digiprezence.com/#organization",
       "name": "DigiPrezence",
       "url": "https://digiprezence.com",
-      "logo": "https://digiprezence.com/src/assets/mark.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digiprezence.com/src/assets/mark.png",
+        "width": 512,
+        "height": 512
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+91-89191-90822",
         "contactType": "sales",
-        "email": "helo@digiprezence.com"
+        "email": "hello@digiprezence.com",
+        "availableLanguage": ["en", "te"]
       },
       "address": {
         "@type": "PostalAddress",
@@ -32,17 +60,24 @@
         "addressRegion": "Andhra Pradesh",
         "addressCountry": "IN"
       },
-      "description": "DigiPrezence provides premium web design, SEO, GEO, social media management, and paid ads services for ambitious small businesses."
+      "description": "DigiPrezence provides premium web design, SEO, GEO, social media management, and paid ads services for ambitious small businesses.",
+      "foundingDate": "2020",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 25
+      }
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://digiprezence.com/#localbusiness",
       "name": "DigiPrezence",
       "image": "https://digiprezence.com/src/assets/mark.png",
       "telephone": "+91-89191-90822",
-      "email": "helo@digiprezence.com",
+      "email": "hello@digiprezence.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Kadapa",
@@ -53,9 +88,142 @@
       },
       "url": "https://digiprezence.com",
       "sameAs": [
-        "https://www.facebook.com/digiPrezenceOfficial"
+        "https://www.facebook.com/digiPrezenceOfficial",
+        "https://www.instagram.com/digiprezence",
+        "https://www.linkedin.com/company/digiprezence",
+        "https://x.com/digiprezence",
+        "https://www.youtube.com/@digiprezence"
       ],
-      "priceRange": "₹"
+      "priceRange": "₹₹",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": ["Bank Transfer", "UPI", "Razorpay"],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kadapa"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      "@id": "https://digiprezence.com/#aggregaterating",
+      "itemReviewed": {
+        "@type": "Organization",
+        "@id": "https://digiprezence.com/#organization"
+      },
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "50",
+      "reviewCount": "50"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://digiprezence.com/#service-web-product",
+      "name": "Web & Product Development",
+      "description": "Marketing sites, web applications, and custom platforms built with modern architecture. Technical SEO setup, content structure for featured snippets and AI summaries, location and service intent mapping.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://digiprezence.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": "Web Development",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://digiprezence.com/#service-social-content",
+      "name": "Social & Content Marketing",
+      "description": "Strategy, creation, scheduling, and paid amplification across platforms. Platform-specific content calendars, brand-safe copywriting, creative production workflow for predictable weekly output.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://digiprezence.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": "Social Media Marketing",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://digiprezence.com/#service-talent-consultancy",
+      "name": "Talent & Digital Growth Consultancy",
+      "description": "Pre-vetted developers, designers, and marketing specialists placed with your team. SEO and demand generation strategy, channel prioritization, quarterly growth planning, funnel and messaging audits.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://digiprezence.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": "Digital Consulting",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://digiprezence.com/#service-paid-ads",
+      "name": "Paid Ads Management",
+      "description": "Google Search and Performance Max campaign management, Meta lead and conversion campaign optimization, audience segmentation and intent-based ad groups with CPL and CAC tracking.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://digiprezence.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": "Paid Advertising",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR"
+        }
+      }
     }
     </script>
   </head>

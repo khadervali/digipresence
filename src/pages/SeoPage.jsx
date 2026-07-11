@@ -378,22 +378,84 @@ export default function SeoPage({ slug }) {
     ensureMetaTag('keywords').setAttribute('content', content.keywords);
   }, [content]);
 
+  const breadcrumbPaths = {
+    'web-product-services':       ['Home', 'Services', 'Web & Product Development'],
+    'social-content-services':    ['Home', 'Services', 'Social & Content Marketing'],
+    'talent-consultancy-services':['Home', 'Services', 'Talent & Digital Growth Consultancy'],
+    'paid-ads-services':          ['Home', 'Services', 'Paid Ads Management'],
+    work:     ['Home', 'Work'],
+    about:    ['Home', 'About'],
+    contact:  ['Home', 'Contact'],
+    blog:     ['Home', 'Blog'],
+    guides:   ['Home', 'Guides'],
+    pricing:  ['Home', 'Pricing'],
+    support:  ['Home', 'Support'],
+    privacy:  ['Home', 'Legal', 'Privacy Policy'],
+    terms:    ['Home', 'Legal', 'Terms & Conditions'],
+    cookies:  ['Home', 'Legal', 'Cookie Policy'],
+    careers:  ['Home', 'Careers'],
+  };
+
+  const sectionUrl = {
+    Services: 'https://digiprezence.com/web-product-services',
+    Legal:    'https://digiprezence.com/privacy',
+  };
+
+  function getBreadcrumbSchema(pageSlug, labels) {
+    const base = 'https://digiprezence.com';
+    const itemListElement = labels.map((name, idx) => {
+      const pos = idx + 1;
+      let item = base;
+      if (pos === labels.length) {
+        item = `${base}/${pageSlug}`;
+      } else if (pos > 1 && labels.length === 3) {
+        item = sectionUrl[name] || `${base}/${pageSlug}`;
+      }
+      return { '@type': 'ListItem', position: pos, name, item };
+    });
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': `${base}/#breadcrumb`,
+      itemListElement,
+    };
+  }
+
+  const serviceAboutId = useMemo(() => {
+    const serviceSlugMap = {
+      'web-product-services': 'https://digiprezence.com/#service-web-product',
+      'social-content-services': 'https://digiprezence.com/#service-social-content',
+      'talent-consultancy-services': 'https://digiprezence.com/#service-talent-consultancy',
+      'paid-ads-services': 'https://digiprezence.com/#service-paid-ads',
+    };
+    const id = serviceSlugMap[slug];
+    return id ? { '@id': id } : undefined;
+  }, [slug]);
+
   useEffect(() => {
     const existing = document.getElementById('dp-page-schema');
-    if (existing) {
-      existing.remove();
-    }
+    if (existing) existing.remove();
+    const existingBc = document.getElementById('dp-breadcrumb-schema');
+    if (existingBc) existingBc.remove();
 
     if (!content) {
       return;
     }
 
+    const pageUrl = `https://digiprezence.com/${slug}`;
+
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
+      '@id': pageUrl,
       name: content.title,
       description: content.description,
       keywords: content.keywords,
+      inLanguage: 'en-IN',
+      dateModified: new Date().toISOString(),
+      publisher: { '@id': 'https://digiprezence.com/#organization' },
+      breadcrumb: { '@id': 'https://digiprezence.com/#breadcrumb' },
+      about: serviceAboutId,
       mainEntity: faqs.length
         ? {
             '@type': 'FAQPage',
@@ -409,13 +471,25 @@ export default function SeoPage({ slug }) {
     const script = document.createElement('script');
     script.id = 'dp-page-schema';
     script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
+    script.text = JSON.stringify(Object.fromEntries(Object.entries(schema).filter(([_, v]) => v !== undefined)));
     document.head.appendChild(script);
+
+    const bcLabels = breadcrumbPaths[slug];
+    if (bcLabels) {
+      const bcSchema = getBreadcrumbSchema(slug, bcLabels);
+      const bcScript = document.createElement('script');
+      bcScript.id = 'dp-breadcrumb-schema';
+      bcScript.type = 'application/ld+json';
+      bcScript.text = JSON.stringify(bcSchema);
+      document.head.appendChild(bcScript);
+    }
 
     return () => {
       script.remove();
+      const bcEl = document.getElementById('dp-breadcrumb-schema');
+      if (bcEl) bcEl.remove();
     };
-  }, [content, faqs]);
+  }, [content, faqs, slug, serviceAboutId]);
 
   if (!content) {
     return (
