@@ -100,7 +100,7 @@ export const pageContent = {
     keywords: 'paid ads agency India, google ads management, meta ads service, lead generation ads agency',
   },
   work: {
-    title: 'DigiPresence Work and Results',
+    title: 'Work and Results',
     description: 'Case-study style overview of DigiPresence projects across healthcare, local business, and SaaS with SEO, GEO, and conversion outcomes.',
     eyebrow: 'Company',
     intro: 'Our work blends design, search visibility, and conversion strategy to turn digital presence into measurable pipeline impact.',
@@ -117,7 +117,7 @@ export const pageContent = {
     keywords: 'digital marketing case studies, SEO growth examples, website conversion results',
   },
   about: {
-    title: 'About DigiPresence',
+    title: 'About',
     description: 'Learn about DigiPresence, a digital presence partner helping ambitious small businesses grow through websites, social, SEO, GEO, and paid media.',
     eyebrow: 'Company',
     intro: 'DigiPresence is built for founders who want premium execution without enterprise complexity. We focus on outcomes, speed, and clear communication.',
@@ -168,7 +168,7 @@ export const pageContent = {
     ],
   },
   careers: {
-    title: 'Careers at DigiPresence',
+    title: 'Careers',
     description: 'Explore digital marketing and creative careers at DigiPresence. Join a team focused on measurable growth and high-quality digital execution.',
     eyebrow: 'Company',
     intro: 'We are building a performance-minded creative team that cares about quality, ownership, and meaningful business outcomes for clients.',
@@ -185,7 +185,7 @@ export const pageContent = {
     keywords: 'digital marketing jobs India, SEO career opportunities, social media job openings',
   },
   contact: {
-    title: 'Contact DigiPresence',
+    title: 'Contact',
     description: 'Contact DigiPresence for website design, SEO, social media, and paid ads services. Start a project discussion with growth-focused strategy.',
     eyebrow: 'Company',
     intro: 'If you need stronger digital visibility and better lead flow, our team can map a practical plan based on your business stage and goals.',
@@ -236,7 +236,7 @@ export const pageContent = {
     keywords: 'SEO guides for small business, GEO optimization guide, digital marketing playbooks',
   },
   pricing: {
-    title: 'DigiPresence Pricing and Engagement Models',
+    title: 'Pricing and Engagement Models',
     description: 'Flexible pricing models for website development, SEO, social media management, and paid ads. Choose a growth plan that matches your stage.',
     eyebrow: 'Resources',
     intro: 'We structure pricing around outcomes and scope clarity so clients can choose a model aligned with budget and growth goals.',
@@ -270,7 +270,7 @@ export const pageContent = {
     keywords: 'digital marketing support, SEO campaign support, website maintenance and support',
   },
   privacy: {
-    title: 'Privacy Policy | DigiPresence',
+    title: 'Privacy Policy',
     description: 'DigiPresence privacy policy describing how we collect, use, and protect contact and website interaction data.',
     eyebrow: 'Legal',
     intro: 'We collect only the information required to serve client inquiries, improve service quality, and maintain secure operations.',
@@ -287,7 +287,7 @@ export const pageContent = {
     keywords: 'privacy policy digital agency, data protection policy India, website form data privacy',
   },
   terms: {
-    title: 'Terms and Conditions | DigiPresence',
+    title: 'Terms and Conditions',
     description: 'Terms and conditions for using DigiPresence website and services, including project engagement, payment, and delivery standards.',
     eyebrow: 'Legal',
     intro: 'These terms define service expectations, responsibilities, and operating boundaries for both DigiPresence and client teams.',
@@ -304,7 +304,7 @@ export const pageContent = {
     keywords: 'digital marketing agency terms, website service terms and conditions, project delivery terms',
   },
   cookies: {
-    title: 'Cookie Policy | DigiPresence',
+    title: 'Cookie Policy',
     description: 'Cookie policy for DigiPresence website detailing analytics, preference cookies, and visitor control options.',
     eyebrow: 'Legal',
     intro: 'Cookies help us understand website performance and improve user experience while maintaining transparent data use practices.',

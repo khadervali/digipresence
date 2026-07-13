@@ -505,7 +505,7 @@ export default function SeoPage({ slug }) {
     );
   }
 
-  const pageTitle = content ? `${content.title} | DigiPresence` : `Page Not Found | DigiPresence`;
+  const pageTitle = content ? `${content.title} | DigiPrezence` : `Page Not Found | DigiPrezence`;
   const pageUrl = content ? `https://digiprezence.com/${slug}` : `https://digiprezence.com/${slug}`;
 
   return (
